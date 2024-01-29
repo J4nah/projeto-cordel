@@ -1,13 +1,25 @@
 @charset "UTF-8";
 
-*{
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', sans-serif;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {
     margin: 0px;
     padding: 0px;
 }
 
-html, body {
+html,
+body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--fonte1);
+
 }
 
 header {
@@ -16,22 +28,26 @@ header {
     text-align: center;
 }
 
-header > h1 {
+header>h1 {
     padding-top: 50px;
     font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 10vw;
 }
 
-header > p {
+header>p {
     padding-bottom: 50px;
 }
 
-header a, footer a {
+header a,
+footer a {
     color: white;
     text-decoration: none;
     font-weight: bolder;
 }
 
-header a :hover, footer a :hover {
+header a:hover, footer a:hover 
+{
     text-decoration: underline;
 }
 
@@ -40,6 +56,12 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 2vw;
+}
+
+section>p {
+    padding-bottom: 2em;
 }
 
 section.normal {
@@ -50,11 +72,32 @@ section.normal {
 section.imagem {
     background-color: rgb(27, 26, 26);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.656);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-section.imagem > p {
-    background-color: rgba(0, 0, 0, 0.226);
-    width: 400px;
+section.imagem>p {
+    max-width: 50vw;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.519);
+    text-shadow: 1px 1px 0px black;
+
+
+}
+
+section#img01 {
+    background-image: url('../imagens/protect-love.jpg');
+    background-position: right center;
+
+
+}
+
+section#img02 {
+    background-image: url('../imagens/bunte-vielfalt.jpg');
+    background-position: right center;
+
 }
 
 footer {
@@ -63,3 +106,21 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+p.referencia {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+p.referencia > a {
+    text-decoration: none;
+    color: black;
+}
+
+p.referencia a:hover {
+    text-decoration: underline;
+    background-color: black;
+    color: white;
+}
+
